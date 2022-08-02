@@ -1,8 +1,10 @@
-/**
- *Submitted for verification at BscScan.com on 2022-07-15
-*/
+// File: PTC.sol
 
+/**
+ *Submitted for verification at BscScan.com on 2022-07-18
+*/
 // SPDX-License-Identifier: MIT
+
 
 pragma solidity ^0.6.12;
 interface IERC20 {
@@ -758,7 +760,7 @@ contract Safemoon is IERC20, Ownable {
     address[] private _excluded;
 
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 10 * 10 ** 8 * 10**9;
+    uint256 private _tTotal = 30 * 10 ** 8 * 10**9;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
     uint256 private _tPoolTotal;
@@ -767,13 +769,13 @@ contract Safemoon is IERC20, Ownable {
     string private _symbol;
     uint8 private _decimals = 9;
 
-    uint256 public _taxFee = 1;
+    uint256 public _taxFee = 2;
     uint256 private _previousTaxFee = _taxFee;
 
     uint256 public _burnFee = 10;
     uint256 private _previousLiquidityFee = _burnFee;
 
-    uint256 public _marketFee = 10;
+    uint256 public _marketFee = 8;
     uint256 private _previousPoolFee = _marketFee;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
